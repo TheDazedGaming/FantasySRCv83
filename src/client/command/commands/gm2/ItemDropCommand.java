@@ -74,7 +74,7 @@ public class ItemDropCommand extends Command {
                 toDrop.setExpiration(expiration);
 
                 toDrop.setOwner("");
-                if(player.gmLevel() < 3) {
+                if(player.gmLevel() < 4) {
                     byte b = toDrop.getFlag();
                     b |= ItemConstants.ACCOUNT_SHARING;
                     b |= ItemConstants.UNTRADEABLE;
@@ -101,7 +101,7 @@ public class ItemDropCommand extends Command {
         }
 
         toDrop.setOwner(player.getName());
-        if(player.gmLevel() < 3) {
+        if(player.gmLevel() < 4) {
             byte b = toDrop.getFlag();
             b |= ItemConstants.ACCOUNT_SHARING;
             b |= ItemConstants.UNTRADEABLE;

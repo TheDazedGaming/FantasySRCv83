@@ -61,12 +61,12 @@ public class ServerConstants {
     public static final boolean USE_MTS = false;
     public static final boolean USE_AUTOHIDE_GM = true;            //When enabled, GMs are automatically hidden when joining. Thanks to Steven Deblois (steven1152).
     public static final boolean USE_BUYBACK_SYSTEM = true;          //Enables the HeavenMS-builtin buyback system, to be used by dead players when clicking the MTS button.
-    public static final boolean USE_FIXED_RATIO_HPMP_UPDATE = true; //Enables the HeavenMS-builtin HPMP update based on the current pool to max pool ratio.
+    public static final boolean USE_FIXED_RATIO_HPMP_UPDATE = false; //Enables the HeavenMS-builtin HPMP update based on the current pool to max pool ratio.
     public static final boolean USE_FAMILY_SYSTEM = true;
     public static final boolean USE_DUEY = true;
     public static final boolean USE_RANDOMIZE_HPMP_GAIN = true;     //Enables randomizing on MaxHP/MaxMP gains and INT accounting for the MaxMP gain.
     public static final boolean USE_STORAGE_ITEM_SORT = true;       //Enables storage "Arrange Items" feature.
-    public static final boolean USE_ITEM_SORT = false;               //Enables inventory "Item Sort/Merge" feature.
+    public static final boolean USE_ITEM_SORT = true;               //Enables inventory "Item Sort/Merge" feature.
     public static final boolean USE_ITEM_SORT_BY_NAME = false;      //Item sorting based on name rather than id.
     public static final boolean USE_PARTY_SEARCH = false;
     public static final boolean USE_PARTY_FOR_STARTERS = true;      //Players level 10 or below can create/invite other players on the given level range.
@@ -80,13 +80,13 @@ public class ServerConstants {
     public static final boolean USE_ENFORCE_MOB_LEVEL_RANGE = true; //Players N levels below the killed mob will gain no experience from defeating it.
     public static final boolean USE_ENFORCE_JOB_LEVEL_RANGE = false;//Caps the player level on the minimum required to advance their current jobs.
     public static final boolean USE_ENFORCE_ITEM_SUGGESTION = false;//Forces the Owl of Minerva and the Cash Shop to always display the defined item array instead of those featured by the players.
-    public static final boolean USE_ENFORCE_UNMERCHABLE_CASH = true;//Forces players to not sell CASH items via merchants.
+    public static final boolean USE_ENFORCE_UNMERCHABLE_CASH = false;//Forces players to not sell CASH items via merchants.
     public static final boolean USE_ENFORCE_UNMERCHABLE_PET = true; //Forces players to not sell pets via merchants. (since non-named pets gets dirty name and other possible DB-related issues)
     public static final boolean USE_ENFORCE_MDOOR_POSITION = false; //Forces mystic door to be spawned near spawnpoints.
     public static final boolean USE_SPAWN_LOOT_ON_ANIMATION = false;//Makes loot appear some time after the mob has been killed (following the mob death animation, instead of instantly).
     public static final boolean USE_SPAWN_RELEVANT_LOOT = true;     //Forces to only spawn loots that are collectable by the player or any of their party members.
     public static final boolean USE_ERASE_PERMIT_ON_OPENSHOP = false;//Forces "shop permit" item to be consumed when player deploy his/her player shop.
-    public static final boolean USE_ERASE_UNTRADEABLE_DROP = false;  //Forces flagged untradeable items to disappear when dropped.
+    public static final boolean USE_ERASE_UNTRADEABLE_DROP = true;  //Forces flagged untradeable items to disappear when dropped.
     public static final boolean USE_ERASE_PET_ON_EXPIRATION = false;//Forces pets to be removed from inventory when expire time comes, rather than converting it to a doll.
     public static final boolean USE_BUFF_MOST_SIGNIFICANT = true;   //When applying buffs, the player will stick with the highest stat boost among the listed, rather than overwriting stats.
     public static final boolean USE_BUFF_EVERLASTING = false;       //Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
@@ -127,7 +127,7 @@ public class ServerConstants {
     public static final int TRAVEL_RATE = 10;                       //Means of transportation rides/departs using 1/N of the default time.
     
     public static final double EQUIP_EXP_RATE = 1.0;                //Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
-    public static final double PARTY_BONUS_EXP_RATE = 2.0;          //Rate for the party exp reward.
+    public static final double PARTY_BONUS_EXP_RATE = 50.0;          //Rate for the party exp reward.
     public static final double PQ_BONUS_EXP_RATE = 1.5;             //Rate for the PQ exp reward.
     
     public static final int PARTY_EXPERIENCE_MOD = 1;               //Change for event stuff.
@@ -139,7 +139,7 @@ public class ServerConstants {
     public static final byte MIN_UNDERLEVEL_TO_EXP_GAIN = 20;           //Characters are unable to get EXP from a mob if their level are under this threshold, only if "USE_ENFORCE_MOB_LEVEL_RANGE" is enabled. For bosses, this attribute is doubled.
     public static final byte MAX_MONITORED_BUFFSTATS = 5;               //Limits accounting for "dormant" buff effects, that should take place when stronger stat buffs expires.
     public static final int MAX_AP = 32767;                             //Max AP allotted on the auto-assigner.
-    public static final int MAX_EVENT_LEVELS = 8;                       //Event has different levels of rewarding system.
+    public static final int MAX_EVENT_LEVELS = 3;                       //Event has different levels of rewarding system.
     public static final long BLOCK_NPC_RACE_CONDT = (long)(0.5 * 1000); //Time the player client must wait before reopening a conversation with an NPC.
     public static final long PET_LOOT_UPON_ATTACK = (long)(0.005 * 1000); //Time the pet must wait before trying to pick items up.
     public static final int TOT_MOB_QUEST_REQUIREMENT = 0;             //Overwrites old 999-mobs requirement for the ToT questline with new requirement value, set 0 for default.
@@ -170,7 +170,7 @@ public class ServerConstants {
     public static final boolean USE_ENHANCED_CLNSLATE = false;   //Clean slates can be applied to recover successfully used slots as well.
     public static final int SCROLL_CHANCE_RATE = 0;            //Number of rolls for success on a scroll, set 0 for default.
     public static final int CHSCROLL_STAT_RATE = 1;             //Number of rolls of stat upgrade on a successfully applied chaos scroll, set 1 for default.
-    public static final int CHSCROLL_STAT_RANGE = 4;            //Stat upgrade range (-N, N) on chaos scrolls.
+    public static final int CHSCROLL_STAT_RANGE = 6;            //Stat upgrade range (-N, N) on chaos scrolls.
     
     //Beginner Skills Configuration
     public static final boolean USE_ULTRA_NIMBLE_FEET = true;   //Massive speed & jump upgrade.
@@ -195,8 +195,8 @@ public class ServerConstants {
     //Quest Points Configuration
     public static final int QUEST_POINT_REPEATABLE_INTERVAL = 24;//Minimum interval between repeatable quest completions for quest points to be awarded.
     public static final int QUEST_POINT_REQUIREMENT = 20;        //Exchange factor between N quest points to +1 fame, set 0 to disable the entire quest point mechanism.
-    public static final int QUEST_POINT_PER_QUEST_COMPLETE = 5;  //Each completed quest awards N quest points, set 0 to disable.
-    public static final int QUEST_POINT_PER_EVENT_CLEAR = 1;     //Each completed event instance awards N quest points, set 0 to disable.
+    public static final int QUEST_POINT_PER_QUEST_COMPLETE = 4;  //Each completed quest awards N quest points, set 0 to disable.
+    public static final int QUEST_POINT_PER_EVENT_CLEAR = 0;     //Each completed event instance awards N quest points, set 0 to disable.
     
     //Guild Configuration
     public static final int CREATE_GUILD_COST = 1500000;
@@ -206,13 +206,13 @@ public class ServerConstants {
     public static final int EXPAND_GUILD_MAX_COST = 5000000;
 
     //Equipment Configuration
-    public static final boolean USE_EQUIPMNT_LVLUP_SLOTS = true;//Equips can upgrade slots at level up.
-    public static final boolean USE_EQUIPMNT_LVLUP_POWER = true;//Enable more powerful stat upgrades at equip level up.
+    public static final boolean USE_EQUIPMNT_LVLUP_SLOTS = false;//Equips can upgrade slots at level up.
+    public static final boolean USE_EQUIPMNT_LVLUP_POWER = false;//Enable more powerful stat upgrades at equip level up.
     public static final boolean USE_EQUIPMNT_LVLUP_CASH = false; //Enable equip leveling up on cash equipments as well.
     public static final boolean USE_SPIKES_AVOID_BANISH = true; //Shoes equipped with spikes prevents mobs from banishing wearer.
     public static final int MAX_EQUIPMNT_LVLUP_STAT_UP = 3; //Max stat upgrade an equipment can have on a levelup.
     public static final int MAX_EQUIPMNT_STAT = 32767;          //Max stat on an equipment by leveling up.
-    public static final int USE_EQUIPMNT_LVLUP = 5;             //All equips lvlup at max level of N, set 1 to disable.
+    public static final int USE_EQUIPMNT_LVLUP = 1;             //All equips lvlup at max level of N, set 1 to disable.
     
     //Map-Chair Configuration
     public static final boolean USE_CHAIR_EXTRAHEAL = true;     //Enable map chairs to further recover player's HP and MP (player must have the Chair Mastery skill).
@@ -238,7 +238,7 @@ public class ServerConstants {
     public static final byte MOUNT_EXHAUST_COUNT = 1;           //Number of proc counts (1 per minute) on the exhaust schedule for tiredness.
     
     //Pet Hunger Configuration
-    public static final boolean PETS_NEVER_HUNGRY = false;      //If true, pets and mounts will never grow hungry.
+    public static final boolean PETS_NEVER_HUNGRY = true;      //If true, pets and mounts will never grow hungry.
     public static final boolean GM_PETS_NEVER_HUNGRY = true;    //If true, pets and mounts owned by GMs will never grow hungry.
     
     //Event Configuration

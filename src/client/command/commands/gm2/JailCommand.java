@@ -54,14 +54,14 @@ public class JailCommand extends Command {
         MapleCharacter victim = c.getChannelServer().getPlayerStorage().getCharacterByName(params[0]);
         if (victim != null) {
             victim.addJailExpirationTime(minutesJailed * 60 * 1000);
-
+            victim.getClient().addInfraction();
             int mapid = 300000012;
 
             if (victim.getMapId() != mapid) {    // those gone to jail won't be changing map anyway
                 MapleMap target = c.getChannelServer().getMapFactory().getMap(mapid);
                 MaplePortal targetPortal = target.getPortal(0);
                 victim.changeMap(target, targetPortal);
-                player.message(victim.getName() + " was jailed for " + minutesJailed + " minutes.");
+                player.message(victim.getName() + " was jailed for " + minutesJailed + " minutes and given 1 Infraction.");
             } else {
                 player.message(victim.getName() + "'s time in jail has been extended for " + minutesJailed + " minutes.");
             }

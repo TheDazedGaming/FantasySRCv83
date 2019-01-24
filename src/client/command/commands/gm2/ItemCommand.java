@@ -78,7 +78,7 @@ public class ItemCommand extends Command {
         }
         
         byte flag = 0;
-        if(player.gmLevel() < 3) {
+        if(player.gmLevel() < 4) {
                 flag |= ItemConstants.ACCOUNT_SHARING;
                 flag |= ItemConstants.UNTRADEABLE;
         }

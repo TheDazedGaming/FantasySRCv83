@@ -285,9 +285,9 @@ public class EventInstanceManager {
                 stopEventTimer();
                 startEventTimer(time);
         }
-        public void gainlostPoints(int gain){
+        public void gainFantasyPoints(int gain){
             for (MapleCharacter chr : getPlayers()) {
-            chr.gainlostPoints(gain);
+            chr.gainFantasyPoints(gain);
         }
         }
         

@@ -171,7 +171,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     private int accountid, id, level;
     private int rank, rankMove, jobRank, jobRankMove;
     private int gender, hair, face;
-    private int lostpoints;
+    private int FantasyPoints;
     private int reborns;
     private int fame, quest_fame;
     private int initialSpawnPoint;
@@ -5755,89 +5755,89 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             return;
         }
         if (level >= 1 && level <= 19) {
-            gainlostPoints(1);
-            yellowMessage("You have gained 1 Lost Point! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(1);
+            yellowMessage("You have gained 1 Fantasy Point! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 20 || level == 25) {
-            gainlostPoints(2);
-            yellowMessage("You have gained 2 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(2);
+            yellowMessage("You have gained 2 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 30 || level == 35) {
-            gainlostPoints(3);
-            yellowMessage("You have gained 3 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(3);
+            yellowMessage("You have gained 3 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 40 || level == 45) {
-            gainlostPoints(4);
-            yellowMessage("You have gained 4 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(4);
+            yellowMessage("You have gained 4 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 50 || level == 55) {
-            gainlostPoints(5);
-            yellowMessage("You have gained 5 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(5);
+            yellowMessage("You have gained 5 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 60 || level == 65) {
-            gainlostPoints(6);
-            yellowMessage("You have gained 6 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(6);
+            yellowMessage("You have gained 6 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 70 || level == 75) {
-            gainlostPoints(7);
-            yellowMessage("You have gained 7 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(7);
+            yellowMessage("You have gained 7 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 80 || level == 85) {
-            gainlostPoints(8);
-            yellowMessage("You have gained 8 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(8);
+            yellowMessage("You have gained 8 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 90 || level == 95) {
-            gainlostPoints(9);
-            yellowMessage("You have gained 9 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(9);
+            yellowMessage("You have gained 9 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 100 || level == 105) {
-            gainlostPoints(10);
-            yellowMessage("You have gained 10 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(10);
+            yellowMessage("You have gained 10 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 110 || level == 115) {
-            gainlostPoints(11);
-            yellowMessage("You have gained 11 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(11);
+            yellowMessage("You have gained 11 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 120 || level == 125) {
-            gainlostPoints(12);
-            yellowMessage("You have gained 12 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(12);
+            yellowMessage("You have gained 12 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 130 || level == 135) {
-            gainlostPoints(13);
-            yellowMessage("You have gained 13 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(13);
+            yellowMessage("You have gained 13 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 140 || level == 145) {
-            gainlostPoints(14);
-            yellowMessage("You have gained 14 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(14);
+            yellowMessage("You have gained 14 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 && getJob() == MapleJob.WINDARCHER4) {
-            gainlostPoints(135);
-            yellowMessage("You have gained an extra 135 Lost Points for reaching max level of Cygnus! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(135);
+            yellowMessage("You have gained an extra 135 Fantasy Points for reaching max level of Cygnus! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 && getJob() == MapleJob.THUNDERBREAKER4) {
-            gainlostPoints(135);
-            yellowMessage("You have gained an extra 135 Lost Points for reaching max level of Cygnus! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(135);
+            yellowMessage("You have gained an extra 135 Fantasy Points for reaching max level of Cygnus! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 && getJob() == MapleJob.NIGHTWALKER4) {
-            gainlostPoints(135);
-            yellowMessage("You have gained an extra 135 Lost Points for reaching max level of Cygnus! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(135);
+            yellowMessage("You have gained an extra 135 Fantasy Points for reaching max level of Cygnus! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 && getJob() == MapleJob.DAWNWARRIOR4) {
-            gainlostPoints(135);
-            yellowMessage("You have gained an extra 135 Lost Points for reaching max level of Cygnus! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(135);
+            yellowMessage("You have gained an extra 135 Fantasy Points for reaching max level of Cygnus! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 && getJob() == MapleJob.BLAZEWIZARD4) {
-            gainlostPoints(135);
-            yellowMessage("You have gained an extra 135 Lost Points for reaching max level of Cygnus! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(135);
+            yellowMessage("You have gained an extra 135 Fantasy Points for reaching max level of Cygnus! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 150 || level == 155) {
-            gainlostPoints(15);
-            yellowMessage("You have gained 15 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(15);
+            yellowMessage("You have gained 15 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 160 || level == 165) {
-            gainlostPoints(16);
-            yellowMessage("You have gained 16 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(16);
+            yellowMessage("You have gained 16 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 170 || level == 175) {
-            gainlostPoints(17);
-            yellowMessage("You have gained 17 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(17);
+            yellowMessage("You have gained 17 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 180 || level == 185) {
-            gainlostPoints(18);
-            yellowMessage("You have gained 18 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(18);
+            yellowMessage("You have gained 18 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 190 || level == 195) {
-            gainlostPoints(19);
-            yellowMessage("You have gained 19 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(19);
+            yellowMessage("You have gained 19 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level >= 200 && level <= 209) {
-            gainlostPoints(20);
-            yellowMessage("You have gained 20 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(20);
+            yellowMessage("You have gained 20 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level >= 210 && level <= 219) {
-            gainlostPoints(21);
-            yellowMessage("You have gained 21 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(21);
+            yellowMessage("You have gained 21 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level >= 220 && level <= 224) {
-            gainlostPoints(22);
-            yellowMessage("You have gained 22 Lost Points! You now have " + getlostPoints() + " Lost Points");
+            gainFantasyPoints(22);
+            yellowMessage("You have gained 22 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points");
         } else if (level == 225) {
-            gainlostPoints(150);
-            yellowMessage("You have gained 150 Lost Points! You now have " + getlostPoints() + " Lost Points. Congratulations on reaching the Max Level for Explorer!");
+            gainFantasyPoints(150);
+            yellowMessage("You have gained 150 Fantasy Points! You now have " + getFantasyPoints() + " Fantasy Points. Congratulations on reaching the Max Level for Explorer!");
         }
     }
 
@@ -6238,7 +6238,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ret.mgc = new MapleGuildCharacter(ret);
             int buddyCapacity = rs.getInt("buddyCapacity");
             ret.buddylist = new BuddyList(buddyCapacity);
-            ret.lostpoints = rs.getInt("lostpoints");
+            ret.FantasyPoints = rs.getInt("FantasyPoints");
             ret.reborns = rs.getInt("reborns");
             
             ret.getInventory(MapleInventoryType.EQUIP).setSlotLimit(rs.getByte("equipslots"));
@@ -7484,7 +7484,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             con.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
             con.setAutoCommit(false);
             PreparedStatement ps;
-            ps = con.prepareStatement("UPDATE characters SET level = ?, fame = ?, str = ?, dex = ?, luk = ?, `int` = ?, exp = ?, gachaexp = ?, hp = ?, mp = ?, maxhp = ?, maxmp = ?, sp = ?, ap = ?, gm = ?, skincolor = ?, gender = ?, job = ?, hair = ?, face = ?, map = ?, meso = ?, hpMpUsed = ?, spawnpoint = ?, party = ?, buddyCapacity = ?, messengerid = ?, messengerposition = ?, mountlevel = ?, mountexp = ?, mounttiredness= ?, equipslots = ?, useslots = ?, setupslots = ?, etcslots = ?,  monsterbookcover = ?, vanquisherStage = ?, dojoPoints = ?, lastDojoStage = ?, finishedDojoTutorial = ?, vanquisherKills = ?, matchcardwins = ?, matchcardlosses = ?, matchcardties = ?, omokwins = ?, omoklosses = ?, omokties = ?, dataString = ?, fquest = ?, jailexpire = ?, partnerId = ?, marriageItemId = ?, lostpoints = ?, reborns = ? WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            ps = con.prepareStatement("UPDATE characters SET level = ?, fame = ?, str = ?, dex = ?, luk = ?, `int` = ?, exp = ?, gachaexp = ?, hp = ?, mp = ?, maxhp = ?, maxmp = ?, sp = ?, ap = ?, gm = ?, skincolor = ?, gender = ?, job = ?, hair = ?, face = ?, map = ?, meso = ?, hpMpUsed = ?, spawnpoint = ?, party = ?, buddyCapacity = ?, messengerid = ?, messengerposition = ?, mountlevel = ?, mountexp = ?, mounttiredness= ?, equipslots = ?, useslots = ?, setupslots = ?, etcslots = ?,  monsterbookcover = ?, vanquisherStage = ?, dojoPoints = ?, lastDojoStage = ?, finishedDojoTutorial = ?, vanquisherKills = ?, matchcardwins = ?, matchcardlosses = ?, matchcardties = ?, omokwins = ?, omoklosses = ?, omokties = ?, dataString = ?, fquest = ?, jailexpire = ?, partnerId = ?, marriageItemId = ?, FantasyPoints = ?, reborns = ? WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             if (gmLevel < 1 && level > 224) {
                 ps.setInt(1, isCygnus() ? 150 : 225);
             } else {
@@ -7597,7 +7597,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ps.setLong(50, jailExpiration);
             ps.setInt(51, partnerId);
             ps.setInt(52, marriageItemid);
-            ps.setInt(53, lostpoints);
+            ps.setInt(53, FantasyPoints);
             ps.setInt(54, reborns);
             ps.setInt(55, id);
 
@@ -7798,13 +7798,13 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 storage.saveToDB(con);
                 usedStorage = false;
             } while(Calendar.getInstance().getTimeInMillis() - (1000 * 60 * 60) >= client.lastLogin.getTimeInMillis()) { 
-                lostpoints += 1;
+                FantasyPoints += 1;
                 client.lastLogin.setTimeInMillis(client.lastLogin.getTimeInMillis() + (1000 * 60 * 60)); 
-                yellowMessage("[LOST] You have gained a LOST POINT for playing for so long! Type @lsi for your point total."); 
+                yellowMessage("[FANTASY BOT] You have gained a FANTASY POINT for playing for so long! Type @info for your point total."); 
                 this.saveCharToDB();
             } 
-            ps = con.prepareStatement("UPDATE characters SET lostpoints = ? WHERE id = ?"); 
-            ps.setInt(1, lostpoints); 
+            ps = con.prepareStatement("UPDATE characters SET FantasyPoints = ? WHERE id = ?"); 
+            ps.setInt(1, FantasyPoints); 
             ps.setInt(2, id); 
             ps.executeUpdate(); 
             ps.close(); 
@@ -7862,12 +7862,12 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         //}, 6000);
     }
 
-    public void gainlostPoints(int points){
-        this.lostpoints += points;
+    public void gainFantasyPoints(int points){
+        this.FantasyPoints += points;
     }
 
-    public int getlostPoints(){
-        return this.lostpoints;
+    public int getFantasyPoints(){
+        return this.FantasyPoints;
     }
     
     public void sendKeymap() {

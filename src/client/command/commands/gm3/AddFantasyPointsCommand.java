@@ -27,7 +27,7 @@ import client.command.Command;
 import client.MapleClient;
 import client.MapleCharacter;
 
-public class AddLostPointsCommand extends Command {
+public class AddFantasyPointsCommand extends Command {
     {
         setDescription("");
     }
@@ -36,14 +36,14 @@ public class AddLostPointsCommand extends Command {
     public void execute(MapleClient c, String[] params) {
         MapleCharacter player = c.getPlayer();
         if (params.length < 2) {
-            player.yellowMessage("Syntax: !addlp <playername> <gainlostpoint>");
+            player.yellowMessage("Syntax: !addfp <playername> <point amount>");
             return;
         }
 
         MapleCharacter victim = c.getChannelServer().getPlayerStorage().getCharacterByName(params[0]);
         if (victim != null) {
-            victim.getClient().getPlayer().gainlostPoints(Integer.parseInt(params[1]));
-            player.message("LP given.");
+            victim.getClient().getPlayer().gainFantasyPoints(Integer.parseInt(params[1]));
+            player.message("FantasyPoints given.");
         } else {
             player.message("Player '" + params[0] + "' could not be found on this channel.");
         }

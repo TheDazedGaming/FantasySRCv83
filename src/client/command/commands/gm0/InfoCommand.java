@@ -48,10 +48,11 @@ public class InfoCommand extends Command {
         int days    = (int) ((milliseconds / (1000*60*60*24)));
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         dateFormat.setTimeZone(TimeZone.getTimeZone(ServerConstants.TIMEZONE));
-        c.getPlayer().yellowMessage("LostStory Server Time: " + dateFormat.format(new Date()));
+        c.getPlayer().yellowMessage("Fantasy Server Time: " + dateFormat.format(new Date()));
+        c.getPlayer().yellowMessage("Infractions:" + c.getInfractions());
         c.getPlayer().yellowMessage("Available AP: " + c.getPlayer().getRemainingAp());
         c.getPlayer().yellowMessage("Current Rebirths:" + c.getPlayer().getReborns());
-        c.getPlayer().yellowMessage("LostPoints: " + c.getPlayer().getlostPoints());
-        c.getPlayer().yellowMessage("LostStory has been online for " + days + " days " + hours + " hours " + minutes + " minutes and " + seconds + " seconds.");
+        c.getPlayer().yellowMessage("FantasyPoints: " + c.getPlayer().getFantasyPoints());
+        c.getPlayer().yellowMessage("Fantasy has been online for " + days + " days " + hours + " hours " + minutes + " minutes and " + seconds + " seconds.");
     }
 }

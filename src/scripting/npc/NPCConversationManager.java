@@ -390,12 +390,12 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         getPlayer().gainReborns(gain);
         }
         
-        public int getlostPoints(){
-        return getPlayer().getlostPoints();
+        public int getFantasyPoints(){
+        return getPlayer().getFantasyPoints();
         }
 
-        public void gainlostPoints(int gain){
-        getPlayer().gainlostPoints(gain);
+        public void gainFantasyPoints(int gain){
+        getPlayer().gainFantasyPoints(gain);
         }
     
         public void resetStats() {

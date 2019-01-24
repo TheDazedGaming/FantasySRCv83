@@ -164,7 +164,7 @@ public class CommandsExecutor {
         addCommand("droplimit", DropLimitCommand.class);
         addCommand("whodrops", WhoDropsCommand.class);
         addCommand("whatdropsfrom", WhatDropsFromCommand.class);
-        addCommand("lsi", InfoCommand.class);
+        addCommand("info", InfoCommand.class);
         //addCommand("credits", StaffCommand.class);
         addCommand("buyback", BuyBackCommand.class);
         //addCommand("uptime", UptimeCommand.class);
@@ -250,7 +250,7 @@ public class CommandsExecutor {
         addCommand("fly", 3, FlyCommand.class);
         addCommand("spawn", 3, SpawnCommand.class);
         addCommand("mutemap", 3, MuteMapCommand.class);
-        addCommand("addlp", 3, AddLostPointsCommand.class);
+        addCommand("addfp", 3, AddFantasyPointsCommand.class);
         addCommand("infract", 3, InfractCommand.class);
         addCommand("infractions", 3, InfractionsCommand.class);
         addCommand("checkdmg", 3, CheckDmgCommand.class);
