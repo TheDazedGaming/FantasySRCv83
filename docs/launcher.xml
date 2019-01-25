@@ -11,7 +11,7 @@
 
 <news> <!-- Recent news goes on top. Goes from newer -> older from top to bottom. --> 
     <title>CLOSED BETA PHASE</title> <!-- The title of the news. --> 
-    <message>Fantasy Closed BETA Testing. Request an account today!</message> <!-- The message of the news. --> 
+    <message>Fantasy Closed BETA Testing. Request an account today! We have limited space so Request quick!</message> <!-- The message of the news. --> 
 
 </news> 
 
