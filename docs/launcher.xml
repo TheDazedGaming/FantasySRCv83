@@ -1,0 +1,73 @@
+<serverinfo> 
+    <servername>Fantasy</servername> <!-- Your server name. --> 
+    <websiteurl>http://playfantasy.tk</websiteurl> <!-- The URL to the website. --> 
+    <forumurl>http://playfantasy.tk/forums</forumurl> <!-- The URL to the forum. --> 
+    <voteurl>http://playfantasy.tk/?base=main&page=vote</voteurl> <!--The URL to the voting page. --> 
+
+    <exprate>18x</exprate> <!-- The server's EXP rate. --> 
+    <mesorate>6x</mesorate> <!-- The server's meso rate. --> 
+    <droprate>3x</droprate> <!-- The server's drop rate.--> 
+</serverinfo> 
+
+<news> <!-- Recent news goes on top. Goes from newer -> older from top to bottom. --> 
+    <title>CLOSED BETA PHASE</title> <!-- The title of the news. --> 
+    <message>Fantasy Closed BETA Testing. Request an account today!</message> <!-- The message of the news. --> 
+
+</news> 
+
+<downloads> <!-- Sizes are in bytes. The download link has to be a direct download link. --> 
+    <client_link>https://www.dropbox.com/s/uuxpb4fcuh3aj9n/FantasyClient.exe?dl=1</client_link> <!-- The direct download link to the file. --> 
+    <client_size>9920523</client_size> <!-- The size in bytes of the file. --> 
+    <client_name>FantasyClient.exe</client_name> <!-- The client's file name. ( Include the .exe ) --> 
+
+    <base_link>https://www.dropbox.com/s/rasvyd7mjotwf8m/Base.wz?dl=1</base_link> <!-- The direct link to the file --> 
+    <base_size>6540</base_size> <!-- The size in bytes of the file. --> 
+
+    <character_link>https://www.dropbox.com/s/m4dpuxehf7qugyk/Character.wz?dl=1</character_link> 
+    <character_size>206199281</character_size> 
+
+    <effect_link>https://www.dropbox.com/s/jp8u5qdds19vdze/Effect.wz?dl=1</effect_link> 
+    <effect_size>63334965</effect_size> 
+
+    <etc_link>https://www.dropbox.com/s/jz07em6dzcs10wu/Etc.wz?dl=1</etc_link> 
+    <etc_size>1202352</etc_size> 
+
+    <item_link>https://www.dropbox.com/s/i9i4hbq961ffe2q/Item.wz?dl=1</item_link>
+    <item_size>18496449</item_size> 
+
+    <list_link>https://www.dropbox.com/s/4xi4wymfb96unio/List.wz?dl=1</list_link>
+    <list_size>13336</list_size> 
+
+    <map_link>https://www.dropbox.com/s/kfmm1kblw2nc8lh/Map.wz?dl=1</map_link> 
+    <map_size>640545257</map_size> 
+
+    <mob_link>https://www.dropbox.com/s/rz6lb26ew1k7ap0/Mob.wz?dl=1</mob_link> 
+    <mob_size>545955765</mob_size> 
+
+    <morph_link>https://www.dropbox.com/s/i9nz2fp5wswushb/Morph.wz?dl=1</morph_link> 
+    <morph_size>6204606</morph_size> 
+
+    <npc_link>https://www.dropbox.com/s/9frdfghhdsizhgx/Npc.wz?dl=1</npc_link> 
+    <npc_size>53867134</npc_size> 
+
+    <quest_link>https://www.dropbox.com/s/cwitt8nk44xj8vo/Quest.wz?dl=1</quest_link> 
+    <quest_size>7105912</quest_size> 
+
+    <reactor_link>https://www.dropbox.com/s/h286oe2gecg6tj2/Reactor.wz?dl=1</reactor_link> 
+    <reactor_size>54441017</reactor_size> 
+
+    <skill_link>https://www.dropbox.com/s/ta87cia3gm9ee35/Skill.wz?dl=1</skill_link> 
+    <skill_size>76896078</skill_size> 
+
+    <sound_link>https://www.dropbox.com/s/cw7m771vusgoskr/Sound.wz?dl=1</sound_link> 
+    <sound_size>366172179</sound_size> 
+
+    <string_link>https://www.dropbox.com/s/pjj8yczrleipeud/String.wz?dl=1</string_link> 
+    <string_size>5023279</string_size> 
+
+    <tamingmob_link>https://www.dropbox.com/s/xhcviynb4ckgcra/TamingMob.wz?dl=1</tamingmob_link> 
+    <tamingmob_size>797</tamingmob_size> 
+
+    <ui_link>https://www.dropbox.com/s/8e6pxkx1p0ckfvt/UI.wz?dl=1</ui_link> 
+    <ui_size>28428952</ui_size> 
+</downloads>  
