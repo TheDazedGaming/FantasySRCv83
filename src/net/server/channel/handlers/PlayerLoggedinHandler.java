@@ -302,11 +302,8 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
             	player.announce(MaplePacketCreator.earnTitleMessage("You can vote now! Vote and earn a vote point!"));
             }
             */
-            if (player.getJob() == MapleJob.LEGEND || player.getJob() == MapleJob.NOBLESSE) {
-                player.dropMessage("You're EXP Rates have been set to 1x until you get your first job advancement.");
-            }
-            if (player.getMapId() <= 2000000) {
-                player.dropMessage("You're EXP Rates have been set to 1x until you get off of Maple Island.");
+            if (player.getLevel() <= 10) {
+                player.dropMessage("You're EXP Rate has been set to 1x until you reach level 11!");
             }
             
             if (player.isGM()){

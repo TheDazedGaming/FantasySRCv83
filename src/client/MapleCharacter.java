@@ -5744,8 +5744,10 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
 
             Thread t = new Thread(r);
             t.start();
+        } else if (level > 10 && level < 12) {
+        setWorldRates();
         }
-
+        
         levelUpMessages();
         guildUpdate();
     }
@@ -5861,20 +5863,14 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     
     public void setWorldRates() {
         World worldz = getWorldServer();
-        if (getMapId() <= 2000000 || getJob() == MapleJob.LEGEND || getJob() == MapleJob.NOBLESSE) {
+        if (getLevel() <= 10) {
             this.expRate = 1;
-            this.mesoRate *= worldz.getMesoRate();
-            this.dropRate *= worldz.getDropRate();
+            this.mesoRate = worldz.getMesoRate();
+            this.dropRate = worldz.getDropRate();
         } else {
-        if (reborns == 0) {
         this.expRate = worldz.getExpRate();
         this.mesoRate = worldz.getMesoRate();
         this.dropRate = worldz.getDropRate();
-    } else {
-        this.expRate = 5;
-        this.mesoRate = worldz.getMesoRate();
-        this.dropRate = worldz.getDropRate();
-        }
     }
     }
     public void revertWorldRates() {
