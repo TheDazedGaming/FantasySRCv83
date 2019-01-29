@@ -40,7 +40,7 @@ var facenew = Array();
 var colors = Array();
 
 function start() {
-    if(cm.getPlayer().gmLevel() == 0) {
+    if(cm.getPlayer().gmLevel() < 2) {
         cm.sendOk("Hey wassup?");
         cm.dispose();
         return;
@@ -51,7 +51,7 @@ function start() {
 
 function action(mode, type, selection) {
     status++;
-    if (mode != 1 || cm.getPlayer().gmLevel() == 0){
+    if (mode != 1 || cm.getPlayer().gmLevel() < 2){
         cm.dispose();
         return;
     }
