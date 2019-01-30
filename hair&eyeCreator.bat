@@ -1,4 +1,4 @@
 @echo off
-set CLASSPATH=.;dist\*
+set CLASSPATH=.;cores\*
 java -Dwzpath=wz\ tools.HairAndEyeCreator false
 pause  

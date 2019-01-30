@@ -124,6 +124,7 @@ public class MapleClient {
 	private long sessionId;
         public Calendar lastLogin = null;
         private int infractions;
+        private int DonorPoints;
         
         public MapleClient(MapleAESOFB send, MapleAESOFB receive, IoSession session) {
 		this.send = send;
@@ -1174,6 +1175,46 @@ public class MapleClient {
 			Connection con = DatabaseConnection.getConnection();
 			try (PreparedStatement ps = con.prepareStatement("UPDATE accounts SET infractions = ? WHERE id = ?")) {
 				ps.setInt(1, infractions);
+				ps.setInt(2, accId);
+				ps.executeUpdate();
+			}
+                        
+                        con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+        public int getDonorPoints(){
+		int points = 0;
+		try {
+                        Connection con = DatabaseConnection.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT `DonorPoints` FROM accounts WHERE id = ?");
+			ps.setInt(1, accId);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				points = rs.getInt("DonorPoints");
+			}
+			ps.close();
+			rs.close();
+
+                        con.close();
+		} catch (SQLException e) {
+                    e.printStackTrace();
+		}
+                DonorPoints = points;
+		return DonorPoints;
+	}
+
+	public void addDonorPoints(int points) {
+		this.DonorPoints += points;
+		saveDonorPoints();
+	}
+        private void saveDonorPoints() {
+		try {
+			Connection con = DatabaseConnection.getConnection();
+			try (PreparedStatement ps = con.prepareStatement("UPDATE accounts SET DonorPoints = ? WHERE id = ?")) {
+				ps.setInt(1, DonorPoints);
 				ps.setInt(2, accId);
 				ps.executeUpdate();
 			}

@@ -397,6 +397,13 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         public void gainFantasyPoints(int gain){
         getPlayer().gainFantasyPoints(gain);
         }
+        public int getDonorPoints(){
+        return getClient().getDonorPoints();
+        }
+
+        public void gainDonorPoints(int gain){
+            getClient().addDonorPoints(gain);
+        }
     
         public void resetStats() {
         int totAp = getPlayer().getStr() + getPlayer().getDex() + getPlayer().getLuk() + getPlayer().getInt() + getPlayer().getRemainingAp();

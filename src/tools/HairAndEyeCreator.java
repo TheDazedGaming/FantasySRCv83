@@ -53,6 +53,15 @@ public class HairAndEyeCreator {
                 sb.append(id).append(", ");
             }
         }
+        System.out.println("Loading Unknown Gender Hairs!");
+        sb.append("\r\n\r\n");
+        sb.append("hairUnknownGender:\r\n");
+        for (MapleDataFileEntry topDir : root.getFiles()) {
+            int id = Integer.parseInt(topDir.getName().substring(0, 8));
+            if ((id / 1000 == 35 || id / 1000 == 36 || id / 1000 == 37 || id / 1000 == 38 || id / 1000 == 39) && id % 10 == 0) {
+                sb.append(id).append(", ");
+            }
+        }
         System.out.println("Loading Male Faces!");
         sb.append("\r\n\r\n");       
         sb.append("faceMale:\r\n");

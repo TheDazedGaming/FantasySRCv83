@@ -27,7 +27,7 @@ import client.command.Command;
 import client.MapleClient;
 import client.MapleCharacter;
 
-public class GiveVpCommand extends Command {
+public class GiveDpCommand extends Command {
     {
         setDescription("");
     }
@@ -36,14 +36,14 @@ public class GiveVpCommand extends Command {
     public void execute(MapleClient c, String[] params) {
         MapleCharacter player = c.getPlayer();
         if (params.length < 2) {
-            player.yellowMessage("Syntax: !givevp <playername> <gainvotepoint>");
+            player.yellowMessage("Syntax: !givedp <playername> <gainvotepoint>");
             return;
         }
 
         MapleCharacter victim = c.getChannelServer().getPlayerStorage().getCharacterByName(params[0]);
         if (victim != null) {
-            victim.getClient().addVotePoints(Integer.parseInt(params[1]));
-            player.message("VP given.");
+            victim.getClient().addDonorPoints(Integer.parseInt(params[1]));
+            player.message("DP given.");
         } else {
             player.message("Player '" + params[0] + "' could not be found on this channel.");
         }

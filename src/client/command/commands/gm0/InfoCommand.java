@@ -50,6 +50,7 @@ public class InfoCommand extends Command {
         dateFormat.setTimeZone(TimeZone.getTimeZone(ServerConstants.TIMEZONE));
         c.getPlayer().yellowMessage("Fantasy Server Time: " + dateFormat.format(new Date()));
         c.getPlayer().yellowMessage("Infractions:" + c.getInfractions());
+        c.getPlayer().yellowMessage("Donor Points:" + c.getDonorPoints());
         c.getPlayer().yellowMessage("Available AP: " + c.getPlayer().getRemainingAp());
         c.getPlayer().yellowMessage("Current Rebirths:" + c.getPlayer().getReborns());
         c.getPlayer().yellowMessage("FantasyPoints: " + c.getPlayer().getFantasyPoints());

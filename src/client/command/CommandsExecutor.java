@@ -272,7 +272,7 @@ public class CommandsExecutor {
         addCommand("chat", 3, ChatCommand.class);
         addCommand("fame", 3, FameCommand.class);
         addCommand("givenx", 3, GiveNxCommand.class);
-        addCommand("givevp", 3, GiveVpCommand.class);
+        addCommand("givedp", 3, GiveDpCommand.class);
         addCommand("givems", 3, GiveMesosCommand.class);
         addCommand("id", 3, IdCommand.class);
         addCommand("expeds", 3, ExpedsCommand.class);
