@@ -179,7 +179,7 @@ public class CommandsExecutor {
         //addCommand("points", "");
         addCommand("joinevent", JoinEventCommand.class);
         addCommand("leaveevent", LeaveEventCommand.class);
-        addCommand("jobadv", JobAdvCommand.class);
+        addCommand("points", PointsCommand.class);
         addCommand("ranks", RanksCommand.class);
         addCommand("str", StatStrCommand.class);
         addCommand("dex", StatDexCommand.class);

@@ -54,12 +54,17 @@ import client.MapleSkinColor;
 import client.MapleStat;
 import client.Skill;
 import client.SkillFactory;
+import client.inventory.Equip;
 import client.inventory.Item;
 import client.inventory.ItemFactory;
+import client.inventory.MapleInventory;
+import client.inventory.MapleInventoryType;
 import client.inventory.MaplePet;
 import constants.ItemConstants;
 import java.awt.Point;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import server.maps.MapleMapObject;
 import server.maps.MapleMapObjectType;
 
@@ -460,6 +465,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 		}
 	}
         
+        
         public void upgradeAlliance() {
                 MapleAlliance alliance = Server.getInstance().getAlliance(c.getPlayer().getGuild().getAllianceId());
                 alliance.increaseCapacity(1);
@@ -487,7 +493,23 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 	public boolean hasMerchant() {
 		return getPlayer().hasMerchant();
 	}
-
+        
+        public String EquipList(MapleClient c) {
+    StringBuilder str = new StringBuilder();
+    MapleInventory equip = c.getPlayer().getInventory(MapleInventoryType.EQUIP);
+    List<String> stra = new LinkedList<String>();
+    for (Item item : equip.list()) {
+    stra.add("#L"+item.getPosition()+"##v"+item.getItemId()+"##l");
+    }
+    for (String strb : stra) {
+    str.append(strb);
+    }
+    return str.toString();
+    }
+        public void upgradesLeft() {
+        short eqpPos = 0;
+        if (getPlayer().getInventory(client.inventory.MapleInventoryType.EQUIP).getEquip(eqpPos).getUpgradeSlots() < 1);
+        }
 	public boolean hasMerchantItems() {
 		try {
 			if (!ItemFactory.MERCHANT.loadItems(getPlayer().getId(), false).isEmpty()) {

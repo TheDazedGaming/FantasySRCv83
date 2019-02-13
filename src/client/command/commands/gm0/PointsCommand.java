@@ -27,18 +27,14 @@ import client.MapleCharacter;
 import client.MapleClient;
 import client.command.Command;
 
-public class JobAdvCommand extends Command {
+public class PointsCommand extends Command {
     {
-        setDescription("Can be used to advance after rebirthing.");
+        setDescription("");
     }
 
     @Override
     public void execute(MapleClient client, String[] params) {
         MapleCharacter player = client.getPlayer();
-        if (client.getPlayer().getReborns() == 1) {
-        client.getAbstractPlayerInteraction().openNpc(9010000, "JobAdvancer");
-    } else {
-            player.dropMessage(5, "This command is only available once you have a rebirth! Try it later!");
-        }
-}
+        client.getAbstractPlayerInteraction().openNpc(2154002, "PointsExchange");
+    }
 }

@@ -282,6 +282,14 @@ public class MapleInventory implements Iterable<Item> {
             lock.unlock();
         }
     }
+    public Equip getEquip(short slot) {
+        lock.lock();
+        try {
+            return (Equip) inventory.get(slot);
+        } finally {
+            lock.unlock();
+        }
+    }
 
     public void removeItem(short slot) {
         removeItem(slot, (short) 1, false);
